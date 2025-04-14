@@ -16,8 +16,6 @@ public class Course {
         this.title = title;
     }
 
-    private Course() { }
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -32,6 +30,8 @@ public class Course {
 
     @OneToMany(mappedBy = "course")
     private List<Enrollment> enrollments;
+
+    public Course() { }
 
 
     @Override

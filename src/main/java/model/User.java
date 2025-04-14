@@ -17,7 +17,7 @@ public class User {
         this.email = email;
     }
 
-    private User() { }
+    public User() { }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

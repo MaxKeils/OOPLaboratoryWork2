@@ -8,9 +8,6 @@ import lombok.Data;
 @Table(name = "enrollment")
 public class Enrollment {
 
-    private Enrollment() {
-    }
-
     public Enrollment(User user, Course course) {
         this.course = course;
         this.user = user;
@@ -29,4 +26,5 @@ public class Enrollment {
     @JoinColumn(name = "course_id")
     private Course course;
 
+    public Enrollment() { }
 }
